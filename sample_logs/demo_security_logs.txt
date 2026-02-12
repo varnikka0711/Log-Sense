@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Events>
+
+  <!-- Failed logon -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4625</EventID>
+      <Level>3</Level>
+      <TimeCreated SystemTime="2026-02-11T15:31:12Z"/>
+      <Computer>DESKTOP-SEC01</Computer>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">admin</Data>
+      <Data Name="IpAddress">203.0.113.45</Data>
+      <Data Name="FailureReason">Account locked out</Data>
+    </EventData>
+  </Event>
+
+  <!-- Successful logon -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4624</EventID>
+      <Level>0</Level>
+      <TimeCreated SystemTime="2026-02-11T15:34:02Z"/>
+      <Computer>DESKTOP-SEC01</Computer>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">john</Data>
+      <Data Name="IpAddress">192.168.1.25</Data>
+      <Data Name="LogonType">2</Data>
+    </EventData>
+  </Event>
+
+  <!-- Privileged logon -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4672</EventID>
+      <Level>0</Level>
+      <TimeCreated SystemTime="2026-02-11T15:36:41Z"/>
+      <Computer>DESKTOP-SEC01</Computer>
+    </System>
+    <EventData>
+      <Data Name="SubjectUserName">SYSTEM</Data>
+      <Data Name="PrivilegeList">SeDebugPrivilege SeBackupPrivilege</Data>
+    </EventData>
+  </Event>
+
+  <!-- New user created -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing"/>
+      <EventID>4720</EventID>
+      <Level>4</Level>
+      <TimeCreated SystemTime="2026-02-11T15:40:19Z"/>
+      <Computer>DESKTOP-SEC01</Computer>
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">temp_admin</Data>
+      <Data Name="SubjectUserName">administrator</Data>
+    </EventData>
+  </Event>
+
+</Events>
